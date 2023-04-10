@@ -1,0 +1,29 @@
+{
+  "name": "@rob-3/reviewer",
+  "version": "0.0.1",
+  "description": "The reviewer side of @rob-3/review",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rob-3/codereview.git"
+  },
+  "author": "Robert Boyd III",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rob-3/codereview/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/rob-3/codereview#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.310.0",
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  }
+}

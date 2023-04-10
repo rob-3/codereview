@@ -1,0 +1,8 @@
+name = "help-worker"
+main = "src/index.ts"
+compatibility_date = "2023-04-10"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "uploads"
+preview_bucket_name = "uploads-dev"

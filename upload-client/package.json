@@ -1,0 +1,30 @@
+{
+  "name": "@rob-3/review",
+  "version": "0.0.1",
+  "description": "Send your code to Rob for code review!",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rob-3/codereview.git"
+  },
+  "author": "Robert Boyd III",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rob-3/codereview/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/rob-3/codereview#readme",
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "globby": "^13.1.3",
+    "pkg-dir": "^7.0.0",
+    "typescript": "^5.0.3"
+  }
+}
