@@ -16,8 +16,8 @@ const WORKER_URL = "https://help-worker.rob-3.workers.dev";
 
 	const files: Record<string, string> = {};
 	for (const filename of filenames) {
-		const file = readFileSync(filename);
-		files[filename] = file.toString();
+		const file = readFileSync(`${dir}/${filename}`);
+		files[filename] = file.toString("base64");
 	}
 	await fetch(WORKER_URL, {
 		method: "POST",

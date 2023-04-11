@@ -36,6 +36,6 @@ const s3 = new S3Client({
 	const files: Record<string, string> = JSON.parse(await rsp.Body?.transformToString() ?? "{}");
 	for (const [path, value] of Object.entries(files)) {
 		mkdirSync(process.argv[2] + "/" + path.split("/").slice(0, -1).join("/"), { recursive: true });
-		writeFileSync(`${process.argv[2]}/${path}`, value);
+		writeFileSync(`${process.argv[2]}/${path}`, Buffer.from(value, "base64"));
 	}
 })();
