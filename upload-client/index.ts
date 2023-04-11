@@ -12,7 +12,7 @@ const WORKER_URL = "https://help-worker.rob-3.workers.dev";
 		console.error("Cannot find a package.json in a parent directory");
 		process.exit(1);
 	}
-	const filenames = await globby("**", { gitignore: true });
+	const filenames = await globby("**", { gitignore: true, dot: true, cwd: dir });
 
 	const files: Record<string, string> = {};
 	for (const filename of filenames) {
