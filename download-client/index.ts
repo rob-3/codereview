@@ -3,7 +3,14 @@
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import { mkdirSync, writeFileSync } from "fs";
 import * as dotenv from "dotenv";
-dotenv.config();
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+dotenv.config({
+	path: __dirname + "/../.env",
+});
 
 if (!process.env.ACCESS_KEY || !process.env.SECRET_ACCESS_KEY || !process.env.WORKERS_URL) {
 	console.log("Missing environment variables");
