@@ -1,5 +1,6 @@
 {
   "name": "@rob-3/review",
+  "bin": "./dist/index.js",
   "version": "0.0.1",
   "description": "Send your code to Rob for code review!",
   "exports": "./dist/index.js",
