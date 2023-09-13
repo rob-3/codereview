@@ -3,6 +3,7 @@
 import { readFileSync } from "fs";
 import { globby } from "globby";
 import { packageDirectory } from "pkg-dir";
+import fetch from "node-fetch";
 
 const WORKER_URL = "https://help-worker.rob-3.workers.dev";
 
